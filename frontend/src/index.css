@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+
+
+/* Slow spin */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spinSlow 6s linear infinite;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Slide up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-up {
+  animation: slideUp 1.8s ease forwards;
+}
+
+/* Loader bar */
+@keyframes loaderBar {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.animate-loader-bar {
+  animation: loaderBar 2.8s ease-in-out forwards;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 45s linear infinite; /* VERY SLOW */
+}
+
+
+
+
+
+
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+.animate-slide-up.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-slide-up.delay-300 {
+  animation-delay: 0.3s;
+}
+
+
+
+
+
+
+
+
+
