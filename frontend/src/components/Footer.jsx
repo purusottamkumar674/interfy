@@ -1,86 +1,214 @@
-import React from 'react';
-import { Facebook, Instagram, Linkedin, Twitter, ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Instagram,
+  Youtube,
+  Facebook,
+  Mail,
+  Phone,
+  MapPin,
+  Heart,
+  Globe,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Training", href: "/training" },
+    { name: "Staffing", href: "/staffing" },
+    { name: "Career", href: "/career" },
+    { name: "Contact", href: "/contact" },
   ];
 
-  const socialLinks = [
-    { icon: <Facebook size={20} />, color: 'hover:bg-blue-600', href: '#' },
-    { icon: <Instagram size={20} />, color: 'hover:bg-pink-600', href: '#' },
-    { icon: <Twitter size={20} />, color: 'hover:bg-sky-400', href: '#' },
-    { icon: <Linkedin size={20} />, color: 'hover:bg-blue-700', href: '#' },
+  const services = [
+    "Website Development",
+    "Web Application Development",
+    "Cloud Services",
+    "Backend Development",
+    "API Integration",
   ];
 
   return (
-    <footer className="relative bg-[#0b1120] text-slate-300 pt-20 pb-10 overflow-hidden">
-      {/* Animated Background Blur */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px] animate-pulse"></div>
+    <footer className="relative bg-black text-gray-300 overflow-hidden cursor-default">
+
+      {/* Glow Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-600/20 blur-3xl rounded-full animate-pulse" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-600/20 blur-3xl rounded-full animate-pulse" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-          
-          {/* Brand Info */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white tracking-tighter">
-              <img src="/src/assets/logo1.png" alt="" />
-             
-            </h2>
-            <p className="text-slate-400 leading-relaxed max-w-sm">
-              Building the future of the web with modern UI/UX and high-performance React components.
-            </p>
-          </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
 
-          {/* Dynamic Links */}
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-6 uppercase tracking-wider">Navigation</h4>
-            <ul className="grid grid-cols-2 gap-4">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="flex items-center group hover:text-cyan-400 transition-colors duration-300"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          {/* Brand Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="/src/assets/logo1.png"
+              alt="Internfy"
+              className="h-16 w-auto mb-6 brightness-0 invert"
+            />
+
+            <p className="text-sm leading-relaxed text-gray-400 mb-4">
+              Internfy builds modern, scalable and futuristic digital solutions.
+              We specialize in creating professional websites and powerful web
+              applications that help businesses grow online.
+            </p>
+
+            <motion.div
+              className="flex items-center gap-2 text-blue-400 text-sm font-medium mb-6"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Globe size={16} />
+              We Build Professional Websites & Web Apps
+            </motion.div>
+
+            <div className="space-y-3 text-sm">
+              <a
+                href="tel:+917761980518"
+                className="flex items-center gap-2 hover:text-white transition cursor-pointer"
+              >
+                <Phone size={16} />
+                +91 7761980518
+              </a>
+
+              <a
+                href="mailto:internfy.in@gmail.com"
+                className="flex items-center gap-2 hover:text-white transition cursor-pointer"
+              >
+                <Mail size={16} />
+                internfy.in@gmail.com
+              </a>
+
+              <a
+                href="https://maps.google.com/?q=Noida+India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition cursor-pointer"
+              >
+                <MapPin size={16} />
+                Noida, India
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-white font-semibold text-lg mb-6">
+              Quick Links
+            </h4>
+            <ul className="space-y-3 text-sm">
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.href}
+                    className="hover:text-blue-400 transition relative group cursor-pointer"
                   >
-                    <ArrowRight size={14} className="mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                     {link.name}
-                  </a>
+                    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Social Presence */}
-          <div className="flex flex-col items-md-end">
-            <h4 className="text-white font-semibold text-lg mb-6 uppercase tracking-wider">Connect With Us</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a
+          {/* Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-white font-semibold text-lg mb-6">
+              Our Services
+            </h4>
+            <ul className="space-y-3 text-sm">
+              {services.map((service, index) => (
+                <li
                   key={index}
-                  href={social.href}
-                  className={`w-12 h-12 flex items-center justify-center rounded-full bg-slate-800/50 border border-slate-700 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(34,211,238,0.2)] ${social.color} hover:text-white`}
+                  className="hover:text-purple-400 transition cursor-pointer"
                 >
-                  {social.icon}
-                </a>
+                  {service}
+                </li>
               ))}
+            </ul>
+          </motion.div>
+
+          {/* Social Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-white font-semibold text-lg mb-6">
+              Connect With Us
+            </h4>
+
+            <div className="flex gap-4 flex-wrap">
+
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl flex items-center justify-center text-white shadow-lg cursor-pointer"
+              >
+                <Facebook size={20} />
+              </motion.a>
+
+              <motion.a
+                href="https://www.instagram.com/internfy_official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center text-white shadow-lg cursor-pointer"
+              >
+                <Instagram size={20} />
+              </motion.a>
+
+              <motion.a
+                href="https://www.youtube.com/@Internfy"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, rotate: -5 }}
+                className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-500 rounded-xl flex items-center justify-center text-white shadow-lg cursor-pointer"
+              >
+                <Youtube size={20} />
+              </motion.a>
+
             </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-gray-800 mt-14 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-center md:text-left">
+          <p className="flex items-center gap-2">
+            © {new Date().getFullYear()} Internfy. All rights reserved.
+            <Heart size={14} className="text-red-500" fill="currentColor" />
+          </p>
+
+          <div className="flex gap-6">
+            <Link to="/privacy" className="hover:text-white transition cursor-pointer">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="hover:text-white transition cursor-pointer">
+              Terms
+            </Link>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>© 2026 DesignLab. All rights reserved.</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <a href="#" className="hover:text-cyan-400">Privacy Policy</a>
-            <a href="#" className="hover:text-cyan-400">Terms of Service</a>
-          </div>
-        </div>
       </div>
     </footer>
   );

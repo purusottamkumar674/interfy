@@ -7,6 +7,7 @@ import CreativeSection from "../components/CreativeSection";
 import Map from "../components/Map";
 
 
+
 const Home = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Home = () => {
       <ImageHoverSection />
       <CreativeSection />
       <Map />
+      
     
 
 

@@ -21,6 +21,8 @@ import WebService from "./pages/WebService";
 import APIService from "./pages/APIService";
 import BackendService from "./pages/BackendService"; 
 import CallFloat from "./components/CallFloat";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +39,7 @@ function App() {
     return<Loader />;
   }
 
+
   return (
     <>
       <Navbar />
@@ -50,7 +53,9 @@ function App() {
       {/* WhatsApp Floating Icon */}
       <WhatsAppFloat />
     </div>
+     <ScrollToTop /> {/* Scroll to top on route change */}
       <Routes>
+       
         {/* Main Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
