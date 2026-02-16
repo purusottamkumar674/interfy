@@ -4,17 +4,17 @@ const data = [
   {
     title: "Grow your business",
     desc: "We believe in challenges and so we have made challenges to help you grow exponentially.",
-    img: "/src/assets/Grow.png",
+    img: "/public/Grow.png",
   },
   {
     title: "Cost savings ideas",
     desc: "We also help our clients with social media strategy and cost-effective solutions.",
-    img: "/src/assets/cost.png",
+    img: "/public/cost.png",
   },
   {
     title: "Boost performance",
     desc: "We deliver email marketing campaigns and performance optimization to your audience.",
-    img: "/src/assets/Boost .png",
+    img: "/public/air.png",
   },
 ];
 
