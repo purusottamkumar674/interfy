@@ -27,7 +27,7 @@ const CreativeSection = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
       style={{
-        backgroundImage: "url('/src/assets/background.png')",
+        backgroundImage: "url('/business/background.png')",
       }}
     >
       {/* Overlay with Gradient */}

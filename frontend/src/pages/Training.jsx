@@ -111,7 +111,7 @@ const Training = () => {
         className="relative h-screen w-full bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('/src/assets/traning.png')",
+            "url('/business/traning.png')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80"></div>

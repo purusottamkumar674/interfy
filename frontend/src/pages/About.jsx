@@ -88,7 +88,7 @@ const About = () => {
         className="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('/src/assets/about.png')",
+            "url('/business/bg.png')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/80"></div>
@@ -271,7 +271,7 @@ const About = () => {
 
             <div className="relative">
               <img
-                src="/src/assets/about-1.png"
+                src="/business/about.png"
                 alt="About Us"
                 className="rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
               />
@@ -297,18 +297,18 @@ const About = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "Rajesh Kumar",
+                name: "Purusottam Kumar",
                 role: "Founder & Lead Developer",
                 bio: "Full-stack developer with 8+ years of experience in web technologies.",
                 image: "👨‍💻",
                 social: [
-                  { icon: "🔗", link: "#" },
+                  { icon: "🔗", link: "https://portfoliowebpk.netlify.app/" },
                   { icon: "💼", link: "#" },
                   { icon: "📧", link: "#" },
                 ]
               },
               {
-                name: "Priya Sharma",
+                name: "Shyam Kumar Singh",
                 role: "UI/UX Designer",
                 bio: "Creative designer passionate about creating beautiful user experiences.",
                 image: "🎨",
@@ -319,7 +319,7 @@ const About = () => {
                 ]
               },
               {
-                name: "Amit Patel",
+                name: "Ujjwal Kumar",
                 role: "Backend Expert",
                 bio: "Specializes in scalable architecture and database optimization.",
                 image: "⚙️",

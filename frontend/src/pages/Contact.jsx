@@ -117,7 +117,7 @@ const Contact = () => {
         className="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('/src/assets/contact.png')",
+            "url('/business/contact.png')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/80"></div>

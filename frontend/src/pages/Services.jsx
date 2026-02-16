@@ -506,7 +506,7 @@ const Services = () => {
         ref={heroRef}
         className="relative w-full bg-cover bg-center flex items-center justify-center overflow-hidden pt-24 md:pt-28 lg:pt-32"
         style={{
-          backgroundImage: "url('/src/assets/service.png')",
+          backgroundImage: "url('/business/service.png')",
           minHeight: "calc(100vh - 80px)",
         }}
       >
