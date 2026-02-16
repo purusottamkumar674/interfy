@@ -36,7 +36,7 @@ const Loader = () => {
             <div className="absolute inset-0 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
             <div className="absolute inset-2 rounded-full border-4 border-purple-500 border-b-transparent animate-spin-slow"></div>
             <img
-              src="/src/assets/logo2.png"
+              src="/assets/logo2.png"
               alt="Company Logo"
               className="absolute inset-0 w-full h-full object-contain p-4 animate-bounce"
             />
