@@ -52,7 +52,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <img
-              src="/assets/logo1.png"
+              src="/business/logo1.png"
               alt="Internfy"
               className="h-16 w-auto mb-6 brightness-0 invert"
             />
