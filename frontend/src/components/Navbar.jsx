@@ -49,7 +49,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
   <img
-    src="/src/assets/logo1.png"
+    src="/business/logo1.png"
     alt="logo"
     className="h-16 md:h-20 w-auto object-contain"
   />
