@@ -108,7 +108,7 @@ const Navbar = () => {
       >
         <div className="flex flex-col h-full">
           <div className="p-6 border-b">
-            <img src="/assets/logo1.png" alt="logo" className="h-12 w-auto" />
+            <img src="/business/logo1.png" alt="logo" className="h-12 w-auto" />
           </div>
           
           <ul className="flex-1 overflow-y-auto py-6 px-4">
